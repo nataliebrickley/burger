@@ -18,6 +18,17 @@ const orm = {
     }, 
     update: function(tableName, col, condition, cb) {
         let queryString = "UPDATE " + tableName + " SET" + objToSql(col) + " WHERE" + condition;
+        connection.query(queryString, (err, result)=>{
+          if (err) throw err;
+          cb(result);
+        })
+    },
+    delete: function(tableName, col, val, cb) {
+      let queryString = "DELETE FROM ?? WHERE ?? = ?";
+      connection.query(queryString, [tableName, col, val], (err, result) => {
+        if (err) throw err;
+        cb(result);
+      })
     }
 };
 
@@ -49,7 +60,9 @@ function objToSql(ob) {
         arr.push(key + "=" + value);
       }
     }
-  
     // translate array of strings to a single comma-separated string
     return arr.toString();
   }
+
+  // Export the orm object for the model.
+module.exports = orm;
