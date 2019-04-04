@@ -1,3 +1,38 @@
 body {
-    background-color: brown
+    background-color: #11144c;
+    color: #3a9679;
+    margin-bottom: 50px;
+}
+h1, form, h2 {
+    text-align: center;
+}
+ol{
+    display: table;
+    margin: 0 auto;
+    text-align: left;
+}
+li {
+    margin-bottom: 5px;
+    color: white;
+}
+h1, h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#burgerName {
+    display: inline-block;
+    width: 300px;
+}
+.btn {
+    background: #e16262;
+    border: 2px solid black;
+}
+#submit {
+    background: #fabc60
+}
+.image{
+    margin: 0 auto;
+}
+img{
+    height: 175px;
 }

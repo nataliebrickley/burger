@@ -1,27 +1,44 @@
-<h1>Burgers!</h1>
+<h1>Eat-Da-Burger!</h1>
 <form class="create-burger">
-    <input type="text" placeholder="Make a Burger" id="burgerName">
-    <button type="submit">Submit</button>
+    <input type="text" placeholder="Make a Burger" id="burgerName" class="form-control">
+    <button type="submit" class="btn" id="submit">Submit</button>
 </form>
-<p>Available Burgers: </p>
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-        {{burger_name}}
-        <button class="devour" data-id="{{id}}" data-devoured="{{devoured}}">Devour It</button>
-    </li>
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<p>You have eaten the following burgers: </p>
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    <li>
-        {{burger_name}}
-    </li>
-    {{/if}}
-    {{/each}}
-</ul>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h2>Available Burgers: </h2>
+            <div class="image">
+                <img
+                    src="https://www.tasteofhome.com/wp-content/uploads/2017/10/exps28800_UG143377D12_18_1b_RMS-696x696.jpg">
+            </div>
+            <ol>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>
+                    {{burger_name}}
+                    <button class="devour btn btn-sm" data-id="{{id}}" data-devoured="{{devoured}}">Devour It!</button>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ol>
+        </div>
+        <div class="col-md-6 text-center">
+            <h2>Devoured burgers: </h2>
+            <div class="image">
+                <img
+                    src="https://img.huffingtonpost.com/asset/5807a9a91b00008027ef818a.jpeg?ops=scalefit_720_noupscale">
+            </div>
+            <div class="list">
+                <ol>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <li>
+                        {{burger_name}}
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
