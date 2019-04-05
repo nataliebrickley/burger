@@ -1,1 +1,3 @@
-# burger
+# Eat-Da-Burger
+Feeling hungry? Eat-Da-Burger is a burger logger which uses MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Users are able to add new burgers to their list of available burgers, devour burgers, and view burgers that they have already eaten. The app stores every burger in a database whether devoured or not. Enjoy!  
+![burger](https://media.giphy.com/media/l0K4lPx8bvdbFMdGM/giphy.gif)
