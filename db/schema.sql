@@ -10,7 +10,8 @@ CREATE TABLE burgers (
 -- burger_name: a string.
     burger_name VARCHAR(255),
 -- devoured: a boolean.
-    devoured BOOLEAN DEFAULT 0
+    devoured BOOLEAN DEFAULT 0,
+     primary key(id)
 );
 
 
